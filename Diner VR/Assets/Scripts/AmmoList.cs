@@ -10,6 +10,17 @@ public class AmmoList : MonoBehaviour
 
     SuckZone zone;
 
+    public static AmmoList instance;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+
+    }
+
     private void Start()
     {
         prefabSuckables = new List<GameObject>(Resources.LoadAll<GameObject>("Suckables"));
