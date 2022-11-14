@@ -40,14 +40,14 @@ public class ArmCannonShot : MonoBehaviour
             if(!ammoEmpty)
             {
                 GameObject ammo = Instantiate(AmmoList.instance.suckedObjects[0], shotPos.position, shotPos.rotation, null);
-                ammo.GetComponent<Rigidbody>().velocity = shotStrength * shotDirection;
+                ammo.GetComponent<Rigidbody>().velocity = shotStrength * transform.forward;
 
                 AmmoList.instance.suckedObjects.RemoveAt(0);
             }
             else
             {
                 GameObject defaultAmmo = Instantiate(defaultAmmoObject, shotPos.position, shotPos.rotation, null);
-                defaultAmmo.GetComponent<Rigidbody>().velocity = shotStrength * shotDirection;
+                defaultAmmo.GetComponent<Rigidbody>().velocity = shotStrength * transform.forward;
 
                 Debug.Log("bruh");
             }

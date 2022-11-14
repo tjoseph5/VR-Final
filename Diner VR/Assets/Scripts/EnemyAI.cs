@@ -36,8 +36,6 @@ public class EnemyAI : MonoBehaviour
     {
         this.transform.LookAt(GameObject.FindWithTag("MainCamera").transform, Vector3.up);
         distanceFromPlayer = Vector3.Distance(this.transform.position, GameObject.FindWithTag("MainCamera").transform.position);
-
-        Debug.Log(distanceFromPlayer);
     }
 
     void FixedUpdate()
@@ -60,7 +58,9 @@ public class EnemyAI : MonoBehaviour
                     {
                         GameObject shotAmmo = Instantiate(ammo, shotPos.position, Quaternion.Euler(-90, 0, 0), null);
 
-                        shotAmmo.GetComponent<Rigidbody>().velocity = Vector3.MoveTowards(shotAmmo.transform.position, GameObject.FindWithTag("MainCamera").transform.position, Time.deltaTime * shotStrength);
+
+                        Vector3 shotDirection = (GameObject.FindWithTag("MainCamera").transform.position - shotAmmo.transform.position).normalized;
+                        shotAmmo.GetComponent<Rigidbody>().velocity = shotDirection * shotStrength * Time.deltaTime;
                         shotTimer = shotRate;
                     }
                 }
