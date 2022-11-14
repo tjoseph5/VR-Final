@@ -48,7 +48,11 @@ public class AmmoList : MonoBehaviour
                     break;
 
                 case StoredAmmoID.ObjectType.sphere:
-                    suckedObjects.Add(prefabSuckables[1]);
+                    suckedObjects.Add(prefabSuckables[2]);
+                    break;
+
+                case StoredAmmoID.ObjectType.ketchup:
+                    suckedObjects.Add(prefabSuckables[2]);
                     break;
             }
         }
