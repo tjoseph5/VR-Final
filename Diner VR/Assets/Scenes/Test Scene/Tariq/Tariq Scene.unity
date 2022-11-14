@@ -415,3 +415,117 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5df8478020a09874d80d63715caaa4ac, type: 3}
+--- !u!1001 &3287401223741547353
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2404456210466992241, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+      propertyPath: m_Name
+      value: French Fry Box 3D Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032480022547770059, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032480022547770059, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032480022547770059, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.0357
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032480022547770059, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032480022547770059, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032480022547770059, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032480022547770059, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032480022547770059, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032480022547770059, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032480022547770059, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032480022547770059, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+--- !u!1001 &7503939875488042952
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7269425932974018675, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+      propertyPath: m_Name
+      value: French Fry 3D Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046209541095656137, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046209541095656137, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046209541095656137, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.8519506
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046209541095656137, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046209541095656137, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046209541095656137, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046209541095656137, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046209541095656137, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046209541095656137, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046209541095656137, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046209541095656137, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
