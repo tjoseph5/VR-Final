@@ -220,7 +220,7 @@
                     "name": "Select Value",
                     "type": "Value",
                     "id": "e6005f29-e4c1-4f3b-8bf7-3a28bab5ca9c",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "Integer",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -238,7 +238,7 @@
                     "name": "Activate Value",
                     "type": "Value",
                     "id": "0c3d0ec9-85a1-45b3-839b-1ca43f859ecd",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "Integer",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -1017,7 +1017,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",                
+                    "name": "",
                     "id": "31d838df-4d4e-4c16-a373-b9c07d9d2e2a",
                     "path": "<XRController>{RightHand}/Primary2DAxis",
                     "interactions": "Sector(directions=12,sweepBehavior=1),Sector(directions=2,sweepBehavior=2)",

@@ -16,6 +16,7 @@ public class TeleportPlayer : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("XR Origin");
+        teleportTo = this.transform;
     }
 
     // Update is called once per frame

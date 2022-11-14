@@ -36,6 +36,8 @@ public class EnemyAI : MonoBehaviour
     {
         this.transform.LookAt(GameObject.FindWithTag("MainCamera").transform, Vector3.up);
         distanceFromPlayer = Vector3.Distance(this.transform.position, GameObject.FindWithTag("MainCamera").transform.position);
+
+        Debug.Log(distanceFromPlayer);
     }
 
     void FixedUpdate()

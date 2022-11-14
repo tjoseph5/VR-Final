@@ -20,8 +20,8 @@ public class ArmCannonSuck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int triggerInt = trigger.action.ReadValue<int>();
-        int gripInt = grip.action.ReadValue<int>();
+        int triggerInt = (int) trigger.action.ReadValue<float>();
+        int gripInt = (int) grip.action.ReadValue<float>();
         
         if(gripInt == 0 && triggerInt == 0)
         {
