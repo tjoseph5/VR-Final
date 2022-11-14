@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c7b554ed95ce6b489a2b858c3ec1738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportTo: {fileID: 1854752439}
+  teleportTo: {fileID: 185856730}
 --- !u!1 &698218710
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +783,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25812
+  m_Name: pb_Mesh25830
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1538,7 +1538,7 @@ PrefabInstance:
     - target: {fileID: 2890943365079193008, guid: 9d3ca89ab34578a46b809c5223e090f3, type: 3}
       propertyPath: teleportTo
       value: 
-      objectReference: {fileID: 1854752439}
+      objectReference: {fileID: 2890943364769634240}
     - target: {fileID: 2890943365079193009, guid: 9d3ca89ab34578a46b809c5223e090f3, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -1593,6 +1593,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d3ca89ab34578a46b809c5223e090f3, type: 3}
+--- !u!4 &2890943364769634240 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2890943365079193010, guid: 9d3ca89ab34578a46b809c5223e090f3, type: 3}
+  m_PrefabInstance: {fileID: 2890943364769634239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7296548905147359070
 PrefabInstance:
   m_ObjectHideFlags: 0
