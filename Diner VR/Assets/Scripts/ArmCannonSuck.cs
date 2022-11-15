@@ -7,7 +7,6 @@ using UnityEngine.XR;
 public class ArmCannonSuck : MonoBehaviour
 {
     public InputActionReference trigger;
-    public InputActionReference grip;
 
     GameObject suckZone;
 
@@ -20,31 +19,26 @@ public class ArmCannonSuck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float triggerInt = trigger.action.ReadValue<int>();
-        float gripInt = grip.action.ReadValue<int>();
-        
-        if(gripInt == 0 && triggerInt == 0)
+        if (trigger.action.triggered)
         {
-            suckZone.SetActive(false);
+            if (!suckZone.activeSelf)
+            {
+                suckZone.SetActive(true);
+            }
+            else
+            {
+                suckZone.SetActive(false);
+            }
         }
-        else if(gripInt == 1 && triggerInt == 1)
-        {
-            suckZone.SetActive(true);
-        }
-
-        Debug.Log("Trigger: " + triggerInt);
-        Debug.Log("Grip: " + gripInt);
     }
 
     private void OnEnable()
     {
         trigger.action.Enable();
-        grip.action.Enable();
     }
 
     private void OnDisable()
     {
         trigger.action.Disable();
-        grip.action.Disable();
     }
 }

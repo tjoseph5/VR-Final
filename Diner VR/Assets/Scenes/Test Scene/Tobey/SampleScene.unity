@@ -1441,6 +1441,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 89711464521112208, guid: 9434fe5dcd485a24e8d55ff4359afebb, type: 3}
+      propertyPath: grip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 89711464521112238, guid: 9434fe5dcd485a24e8d55ff4359afebb, type: 3}
       propertyPath: m_InteractionManager
       value: 
