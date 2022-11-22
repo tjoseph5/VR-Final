@@ -6,7 +6,7 @@ public class AmmoList : MonoBehaviour
 {
     public List<GameObject> suckedObjects = new List<GameObject>();
 
-    public List<GameObject> prefabSuckables;
+    public ItemPool prefabSuckables;
 
     SuckZone zone;
 
@@ -23,15 +23,7 @@ public class AmmoList : MonoBehaviour
 
     private void Start()
     {
-        prefabSuckables = new List<GameObject>(Resources.LoadAll<GameObject>("Suckables"));
-
         zone = GetComponentInParent<SuckZone>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -44,15 +36,31 @@ public class AmmoList : MonoBehaviour
             switch (other.GetComponent<StoredAmmoID>().type)
             {
                 case StoredAmmoID.ObjectType.fork:
-                    suckedObjects.Add(prefabSuckables[0]);
+                    suckedObjects.Add(prefabSuckables.items[2]);
                     break;
 
                 case StoredAmmoID.ObjectType.sphere:
-                    suckedObjects.Add(prefabSuckables[2]);
+                    suckedObjects.Add(prefabSuckables.items[0]);
                     break;
 
                 case StoredAmmoID.ObjectType.ketchup:
-                    suckedObjects.Add(prefabSuckables[2]);
+                    suckedObjects.Add(prefabSuckables.items[4]);
+                    break;
+
+                case StoredAmmoID.ObjectType.mustard:
+                    suckedObjects.Add(prefabSuckables.items[5]);
+                    break;
+
+                case StoredAmmoID.ObjectType.spoon:
+                    suckedObjects.Add(prefabSuckables.items[1]);
+                    break;
+
+                case StoredAmmoID.ObjectType.knife:
+                    suckedObjects.Add(prefabSuckables.items[3]);
+                    break;
+
+                case StoredAmmoID.ObjectType.fries:
+                    suckedObjects.Add(prefabSuckables.items[6]);
                     break;
             }
         }

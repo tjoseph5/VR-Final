@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class StoredAmmoID : MonoBehaviour
 {
-    public enum ObjectType { sphere, fork, ketchup}
+    public enum ObjectType { sphere, fork, spoon, knife, ketchup, mustard, fries }
     public ObjectType type;
 }

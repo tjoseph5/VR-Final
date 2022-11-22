@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 6342822439492420972}
   - component: {fileID: 9215152288736375206}
   - component: {fileID: -5427272728643298968}
+  - component: {fileID: 7265717632038619663}
+  - component: {fileID: 333062395730943687}
   m_Layer: 0
   m_Name: French Fry 3D Model
-  m_TagString: Untagged
+  m_TagString: Suckable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,4 +101,31 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
+--- !u!64 &7265717632038619663
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7269425932974018675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -526727950741784084, guid: 532ca9dfbeec17047baef6bc743c11f6, type: 3}
+--- !u!114 &333062395730943687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7269425932974018675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6f445125238d541b820464fbf5eefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 6
