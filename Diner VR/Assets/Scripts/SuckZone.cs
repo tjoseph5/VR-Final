@@ -10,6 +10,17 @@ public class SuckZone : MonoBehaviour
 
     public Transform innerHolder;
 
+    public static SuckZone instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+
+    }
+
     void Start()
     {
         innerHolder = this.transform.GetChild(0);

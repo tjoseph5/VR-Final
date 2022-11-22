@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Item Spawning Pool")]
 public class ItemPool : ScriptableObject
 {
-    public List<GameObject> items;
+    public GameObject[] items;
 }
