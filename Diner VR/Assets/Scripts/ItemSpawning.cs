@@ -14,7 +14,9 @@ public class ItemSpawning : MonoBehaviour
     float currentSpawnTime;
     public float currentSpawnDuration;
 
-    bool canRefresh;
+    public bool canRefresh;
+
+    public bool debugCSA_Trigger;
 
     void Start()
     {
@@ -27,6 +29,7 @@ public class ItemSpawning : MonoBehaviour
 
         currentSpawnTime = 0;
         canRefresh = false;
+        debugCSA_Trigger = false;
     }
 
     private void Update()
@@ -47,35 +50,50 @@ public class ItemSpawning : MonoBehaviour
             currentSpawnTime = 0;
             CurrentSpawnActivation();
         }
+
+        if (debugCSA_Trigger)
+        {
+            ActivateNewSpawn();
+            debugCSA_Trigger = false;
+        }
     }
 
     public void CurrentSpawnActivation()
     {
-        GameObject spawnedObject = Instantiate(currentItem, transform.position, transform.rotation, null);
+        GameObject spawnedObject = Instantiate(currentItem, transform.position, currentItem.transform.rotation, null);
+        spawnedObject.GetComponent<StoredAmmoID>().originSpawn = this;
     }
 
     public void ActivateNewSpawn()
     {
-        if (nonSpawnedItems.Capacity > 0)
+        if (nonSpawnedItems.Count > 1)
         {
             nonSpawnedItems.RemoveAt(itemRandomID);
-            itemRandomID = Random.Range(0, nonSpawnedItems.Capacity);
+            itemRandomID = Random.Range(0, nonSpawnedItems.Count);
 
             currentItem = nonSpawnedItems[itemRandomID];
 
-            GameObject spawnedObject = Instantiate(currentItem, transform.position, transform.rotation, null);
+            CurrentSpawnActivation();
+
+            Debug.Log("stuff in here");
         }
-        else if(nonSpawnedItems.Capacity == 0)
+        else if(nonSpawnedItems.Count <= 1)
         {
-            nonSpawnedItems = originalPool.items;
+            foreach(GameObject item in originalPool.items)
+            {
+                if (!nonSpawnedItems.Contains(item))
+                {
+                    nonSpawnedItems.Add(item);
+                }
+            }
+
+            itemRandomID = Random.Range(0, nonSpawnedItems.Count);
 
             currentItem = nonSpawnedItems[itemRandomID];
 
-            itemRandomID = Random.Range(0, nonSpawnedItems.Capacity);
+            CurrentSpawnActivation();
 
-            GameObject spawnedObject = Instantiate(currentItem, transform.position, transform.rotation, null);
-
-            nonSpawnedItems.RemoveAt(itemRandomID);
+            Debug.Log("nothing to see");
         }
     }
 }

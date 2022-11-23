@@ -6,4 +6,6 @@ public class StoredAmmoID : MonoBehaviour
 {
     public enum ObjectType { sphere, fork, spoon, knife, ketchup, mustard, fries }
     public ObjectType type;
+
+    public ItemSpawning originSpawn;
 }

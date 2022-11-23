@@ -63,6 +63,11 @@ public class AmmoList : MonoBehaviour
                     suckedObjects.Add(prefabSuckables.items[6]);
                     break;
             }
+
+            if(other.gameObject.GetComponent<StoredAmmoID>() && other.gameObject.GetComponent<StoredAmmoID>().originSpawn != null)
+            {
+                other.gameObject.GetComponent<StoredAmmoID>().originSpawn.canRefresh = true;
+            }
         }
     }
 }
