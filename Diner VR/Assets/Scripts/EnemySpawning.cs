@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 
 public class EnemySpawning : MonoBehaviour
 {
@@ -9,8 +8,8 @@ public class EnemySpawning : MonoBehaviour
 
     public GameObject currentEnemy;
 
-    public int minimumIndexID;
     public int itemRandomID;
+    int numberCycle;
 
     float currentSpawnTime;
     public float currentSpawnDuration;
@@ -23,10 +22,9 @@ public class EnemySpawning : MonoBehaviour
     {
         currentSpawnTime = 0;
 
-        itemRandomID = GiveMeANumber();
+        currentSpawnDuration = Random.Range(3, 10);
 
-        currentEnemy = originalPool.items[itemRandomID];
-
+        currentEnemy = null;
 
     }
 
@@ -38,7 +36,15 @@ public class EnemySpawning : MonoBehaviour
 
             if(currentSpawnTime >= currentSpawnDuration)
             {
-                SpawnEnemies();
+                if(EnemyManager.instance.currentEnemies < EnemyManager.instance.enemyCap)
+                {
+                    SpawnEnemies();
+                }
+                else
+                {
+                    currentSpawnTime = 0;
+                    Debug.Log("cannot spawn until enemies are defeated");
+                }
             }
         }
         else
@@ -79,32 +85,67 @@ public class EnemySpawning : MonoBehaviour
                 Debug.Log("Subtracted from Milkshake");
                 break;
         }
+
+        currentSpawnDuration = Random.Range(3, 15);
     }
 
-    private int GiveMeANumber()
+    int GiveMeANumber()
     {
-        var exclude = new HashSet<int>();
-        var range = Enumerable.Range(0, originalPool.items.Count()).Where(i => !exclude.Contains(i));
-
-        var rand = new System.Random();
-        int index = rand.Next(0, originalPool.items.Count() - exclude.Count);
-
-
-        if(EnemyManager.instance.waffleEnemyAmt == 0)
+        switch (numberCycle)
         {
-            exclude.Add(0);
+            case 0:
+                if (EnemyManager.instance.friesEnemyAmt >= 1)
+                {
+                    numberCycle = 1;
+                }
+
+                if(EnemyManager.instance.friesEnemyAmt <= 0 && EnemyManager.instance.milkshakeEnemyAmt >= 1)
+                {
+                    numberCycle = 2;
+                }
+
+                if(EnemyManager.instance.friesEnemyAmt <= 0 && EnemyManager.instance.milkshakeEnemyAmt <= 0)
+                {
+                    numberCycle = 0;
+                }
+
+                break;
+
+            case 1:
+                if (EnemyManager.instance.milkshakeEnemyAmt >= 1)
+                {
+                    numberCycle = 2;
+                }
+
+                if (EnemyManager.instance.milkshakeEnemyAmt <= 0 && EnemyManager.instance.waffleEnemyAmt >= 1)
+                {
+                    numberCycle = 0;
+                }
+
+                if (EnemyManager.instance.milkshakeEnemyAmt <= 0 && EnemyManager.instance.waffleEnemyAmt <= 0)
+                {
+                    numberCycle = 1;
+                }
+                break;
+
+            case 2:
+                if (EnemyManager.instance.waffleEnemyAmt >= 1)
+                {
+                    numberCycle = 0;
+                }
+
+                if (EnemyManager.instance.waffleEnemyAmt <= 0 && EnemyManager.instance.friesEnemyAmt >= 1)
+                {
+                    numberCycle = 1;
+                }
+
+                if (EnemyManager.instance.waffleEnemyAmt <= 0 && EnemyManager.instance.friesEnemyAmt <= 0)
+                {
+                    numberCycle = 2;
+                }
+                break;
         }
 
-        if (EnemyManager.instance.friesEnemyAmt == 0)
-        {
-            exclude.Add(1);
-        }
-
-        if (EnemyManager.instance.milkshakeEnemyAmt == 0)
-        {
-            exclude.Add(2);
-        }
-
-        return range.ElementAt(index);
+        return numberCycle;
     }
 }

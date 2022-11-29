@@ -8,4 +8,6 @@ public class StoredAmmoID : MonoBehaviour
     public ObjectType type;
 
     public ItemSpawning originSpawn;
+
+    public bool hasBeenShot = false;
 }

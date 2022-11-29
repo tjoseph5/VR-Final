@@ -40,5 +40,13 @@ public class EnemyManager : MonoBehaviour
     {
         currentEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
         enemyOrder = waffleEnemyAmt + friesEnemyAmt + milkshakeEnemyAmt;
+
+        if(waffleEnemyAmt <= 0 && friesEnemyAmt <= 0 && milkshakeEnemyAmt <= 0)
+        {
+            foreach(EnemySpawning spawn in GameObject.FindObjectsOfType<EnemySpawning>())
+            {
+                spawn.canRefresh = false;
+            }
+        }
     }
 }

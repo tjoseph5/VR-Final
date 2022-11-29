@@ -117,8 +117,8 @@ MonoBehaviour:
   shotPos: {fileID: 6790703659453718744}
   shotRate: 3
   shotStrength: 4
-  moveSpeed: 5
-  distanceThreshold: 5
+  moveSpeed: 0.7
+  distanceThreshold: 3
 --- !u!54 &7822406431942249839
 Rigidbody:
   m_ObjectHideFlags: 0
