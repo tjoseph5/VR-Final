@@ -10,6 +10,18 @@ public class ArmCannonSuck : MonoBehaviour
 
     GameObject suckZone;
 
+    public bool canSuck;
+
+    public static ArmCannonSuck instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,17 +31,21 @@ public class ArmCannonSuck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (trigger.action.triggered)
+        if (canSuck)
         {
-            if (!suckZone.activeSelf)
+            if (trigger.action.triggered)
             {
-                suckZone.SetActive(true);
-            }
-            else
-            {
-                suckZone.SetActive(false);
+                if (!suckZone.activeSelf)
+                {
+                    suckZone.SetActive(true);
+                }
+                else
+                {
+                    suckZone.SetActive(false);
+                }
             }
         }
+        
     }
 
     private void OnEnable()

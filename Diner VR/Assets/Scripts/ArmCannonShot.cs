@@ -11,11 +11,21 @@ public class ArmCannonShot : MonoBehaviour
     Vector3 shotDirection;
 
     public bool ammoEmpty;
-
+    public bool canShoot;
 
     public InputActionReference trigger;
 
-    public GameObject defaultAmmoObject; 
+    public GameObject defaultAmmoObject;
+
+    public static ArmCannonShot instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     void Start()
     {
@@ -34,25 +44,31 @@ public class ArmCannonShot : MonoBehaviour
             ammoEmpty = true;
         }
 
-
-        if (trigger.action.triggered)
+        if (canShoot)
         {
-            if(!ammoEmpty)
+            if (trigger.action.triggered)
             {
-                GameObject ammo = Instantiate(AmmoList.instance.suckedObjects[0], shotPos.position, shotPos.rotation, null);
-                ammo.GetComponent<Rigidbody>().velocity = shotStrength * transform.forward;
+                if (!ammoEmpty)
+                {
+                    GameObject ammo = Instantiate(AmmoList.instance.suckedObjects[0], shotPos.position, shotPos.rotation, null);
+                    ammo.GetComponent<Rigidbody>().velocity = shotStrength * transform.forward;
 
-                ammo.GetComponent<StoredAmmoID>().hasBeenShot = true;
+                    ammo.GetComponent<StoredAmmoID>().hasBeenShot = true;
 
-                AmmoList.instance.suckedObjects.RemoveAt(0);
+                    AmmoList.instance.suckedObjects.RemoveAt(0);
+                }
+                else
+                {
+                    GameObject defaultAmmo = Instantiate(defaultAmmoObject, shotPos.position, shotPos.rotation, null);
+                    defaultAmmo.GetComponent<Rigidbody>().velocity = shotStrength * transform.forward;
+
+                    Debug.Log("bruh");
+                }
             }
-            else
-            {
-                GameObject defaultAmmo = Instantiate(defaultAmmoObject, shotPos.position, shotPos.rotation, null);
-                defaultAmmo.GetComponent<Rigidbody>().velocity = shotStrength * transform.forward;
+        }
+        else
+        {
 
-                Debug.Log("bruh");
-            }
         }
     }
 }

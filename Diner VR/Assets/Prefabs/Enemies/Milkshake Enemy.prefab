@@ -113,12 +113,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 0
-  ammo: {fileID: 4782567323586709701, guid: aa1b9edfb2bae46459c77792c8392db1, type: 3}
+  ammo: {fileID: 7269425932974018675, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
   shotPos: {fileID: 6790703659453718744}
-  shotRate: 3
-  shotStrength: 4
+  shotRate: 1
+  shotStrength: 40
   moveSpeed: 0.7
-  distanceThreshold: 3
+  distanceThreshold: 4
 --- !u!54 &7822406431942249839
 Rigidbody:
   m_ObjectHideFlags: 0
