@@ -484,6 +484,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a5f1cb02957dd4cbfa6ee31e383724, type: 3}
+--- !u!1001 &7494041383915710059
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7260162410668095298, guid: 8f98bcc6a8c489c4dbbf6c4f52aef100, type: 3}
+      propertyPath: m_Name
+      value: Diner Booth 3D Model (Merged)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037403144779705848, guid: 8f98bcc6a8c489c4dbbf6c4f52aef100, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037403144779705848, guid: 8f98bcc6a8c489c4dbbf6c4f52aef100, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037403144779705848, guid: 8f98bcc6a8c489c4dbbf6c4f52aef100, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037403144779705848, guid: 8f98bcc6a8c489c4dbbf6c4f52aef100, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037403144779705848, guid: 8f98bcc6a8c489c4dbbf6c4f52aef100, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037403144779705848, guid: 8f98bcc6a8c489c4dbbf6c4f52aef100, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037403144779705848, guid: 8f98bcc6a8c489c4dbbf6c4f52aef100, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037403144779705848, guid: 8f98bcc6a8c489c4dbbf6c4f52aef100, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037403144779705848, guid: 8f98bcc6a8c489c4dbbf6c4f52aef100, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037403144779705848, guid: 8f98bcc6a8c489c4dbbf6c4f52aef100, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037403144779705848, guid: 8f98bcc6a8c489c4dbbf6c4f52aef100, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f98bcc6a8c489c4dbbf6c4f52aef100, type: 3}
 --- !u!1001 &7503939875488042952
 PrefabInstance:
   m_ObjectHideFlags: 0
