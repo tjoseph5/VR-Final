@@ -541,6 +541,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15c1baf310f4dfa498f8bdb99397b455, type: 3}
+--- !u!1001 &6626162764669677731
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6284124828278242838, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
+      propertyPath: m_Name
+      value: Coffee Mug 3D Model (Merged)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664872869355119788, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664872869355119788, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664872869355119788, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5034
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664872869355119788, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664872869355119788, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664872869355119788, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664872869355119788, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664872869355119788, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664872869355119788, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664872869355119788, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664872869355119788, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
 --- !u!1001 &7494041383915710059
 PrefabInstance:
   m_ObjectHideFlags: 0
