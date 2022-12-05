@@ -716,6 +716,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15c1baf310f4dfa498f8bdb99397b455, type: 3}
+--- !u!1001 &6417286996510210512
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6183338196273246262, guid: bc5020a838a6d444bbebf8d29edfb12a, type: 3}
+      propertyPath: m_Name
+      value: Diner Counter 3D Model (Merged)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810693849414429324, guid: bc5020a838a6d444bbebf8d29edfb12a, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810693849414429324, guid: bc5020a838a6d444bbebf8d29edfb12a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810693849414429324, guid: bc5020a838a6d444bbebf8d29edfb12a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4018
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810693849414429324, guid: bc5020a838a6d444bbebf8d29edfb12a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810693849414429324, guid: bc5020a838a6d444bbebf8d29edfb12a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810693849414429324, guid: bc5020a838a6d444bbebf8d29edfb12a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810693849414429324, guid: bc5020a838a6d444bbebf8d29edfb12a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810693849414429324, guid: bc5020a838a6d444bbebf8d29edfb12a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810693849414429324, guid: bc5020a838a6d444bbebf8d29edfb12a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810693849414429324, guid: bc5020a838a6d444bbebf8d29edfb12a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810693849414429324, guid: bc5020a838a6d444bbebf8d29edfb12a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bc5020a838a6d444bbebf8d29edfb12a, type: 3}
 --- !u!1001 &6626162764669677731
 PrefabInstance:
   m_ObjectHideFlags: 0
