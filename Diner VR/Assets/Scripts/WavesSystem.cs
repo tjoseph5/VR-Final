@@ -19,7 +19,7 @@ public class WavesSystem : MonoBehaviour
 
     private void Start()
     {
-        //waveIsActive = false;
+        waveIsActive = true; //make this false at the start
         waveCounter = 1;
 
         foreach(ItemSpawning item in GameObject.FindObjectsOfType<ItemSpawning>())
