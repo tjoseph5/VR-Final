@@ -874,6 +874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  canSuck: 1
 --- !u!1 &89711464795866583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,6 +1558,7 @@ MonoBehaviour:
   shotRate: 0
   shotStrength: 10
   ammoEmpty: 0
+  canShoot: 1
   trigger: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   defaultAmmoObject: {fileID: 4782567323586709701, guid: aa1b9edfb2bae46459c77792c8392db1, type: 3}
 --- !u!1 &89711465372678158
