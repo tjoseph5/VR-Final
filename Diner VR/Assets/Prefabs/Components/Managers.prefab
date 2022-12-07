@@ -94,9 +94,9 @@ MonoBehaviour:
   enemyOrder: 0
   enemyOrderLimit: 0
   currentEnemies: 0
-  waffleEnemyAmt: 3
-  friesEnemyAmt: 3
-  milkshakeEnemyAmt: 4
+  waffleEnemyAmt: 0
+  friesEnemyAmt: 0
+  milkshakeEnemyAmt: 0
   startingCap: 3
   startingOrderLimit: 10
   maxOverallEnemiesCap: 100

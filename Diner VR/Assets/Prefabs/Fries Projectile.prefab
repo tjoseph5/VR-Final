@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -5427272728643298968}
   - component: {fileID: 7265717632038619663}
   - component: {fileID: 333062395730943687}
+  - component: {fileID: -1221168080609197557}
   m_Layer: 0
   m_Name: Fries Projectile
   m_TagString: Suckable
@@ -130,3 +131,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 6
   originSpawn: {fileID: 0}
+  hasBeenShot: 0
+--- !u!114 &-1221168080609197557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7269425932974018675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a728f9c39276d7940875c7dc47019eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 10

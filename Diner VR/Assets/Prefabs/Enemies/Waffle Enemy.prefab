@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4486519594947377189}
   - component: {fileID: 7803762320124211797}
   - component: {fileID: 6812913491026613189}
+  - component: {fileID: 2007664319503248177}
   m_Layer: 0
   m_Name: Waffle Enemy
   m_TagString: Enemy
@@ -120,3 +121,17 @@ MonoBehaviour:
   shotStrength: 0
   moveSpeed: 1
   distanceThreshold: 2
+--- !u!64 &2007664319503248177
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2685180831043246576}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6259490703757726414, guid: b15ed8a1d82ea914781c647609675357, type: 3}

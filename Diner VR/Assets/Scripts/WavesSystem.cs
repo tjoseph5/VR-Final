@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.XR.Management;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class WavesSystem : MonoBehaviour
 {
@@ -19,7 +22,7 @@ public class WavesSystem : MonoBehaviour
 
     private void Start()
     {
-        waveIsActive = true; //make this false at the start
+        waveIsActive = false; //make this false at the start
         waveCounter = 1;
 
         foreach(ItemSpawning item in GameObject.FindObjectsOfType<ItemSpawning>())
@@ -59,6 +62,20 @@ public class WavesSystem : MonoBehaviour
 
                 EnemyManager.instance.enemyOrderLimit += 5;
             }
+
+            GameObject.Find("RightHand Controller").GetComponent<XRInteractorLineVisual>().enabled = false;
+            GameObject.Find("LeftHand Controller").GetComponent<XRInteractorLineVisual>().enabled = false;
+
+            GameObject.Find("RightHand Controller").GetComponent<LineRenderer>().enabled = false;
+            GameObject.Find("LeftHand Controller").GetComponent<LineRenderer>().enabled = false;
+
+            foreach(Button button in GameObject.FindObjectsOfType<Button>())
+            {
+                if (button.interactable)
+                {
+                    button.interactable = false;
+                }
+            }
         }
         else
         {
@@ -72,6 +89,14 @@ public class WavesSystem : MonoBehaviour
                 ArmCannonShot.instance.canShoot = false;
                 ArmCannonSuck.instance.canSuck = false;
             }
+
+            ArmCannonSuck.instance.suckZone.SetActive(false);
+
+            GameObject.Find("RightHand Controller").GetComponent<XRInteractorLineVisual>().enabled = true;
+            GameObject.Find("LeftHand Controller").GetComponent<XRInteractorLineVisual>().enabled = true;
+
+            GameObject.Find("RightHand Controller").GetComponent<LineRenderer>().enabled = true;
+            GameObject.Find("LeftHand Controller").GetComponent<LineRenderer>().enabled = true;
         }
     }
 

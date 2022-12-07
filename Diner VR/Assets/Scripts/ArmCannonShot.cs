@@ -19,6 +19,8 @@ public class ArmCannonShot : MonoBehaviour
 
     public static ArmCannonShot instance;
 
+    bool shotTriggered;
+
     private void Awake()
     {
         if (instance == null)
@@ -30,9 +32,14 @@ public class ArmCannonShot : MonoBehaviour
     void Start()
     {
         shotDirection = shotPos.forward;
+        shotTriggered = false;
     }
 
-    // Update is called once per frame
+    private void Update()
+    {
+        if (trigger.action.triggered) { shotTriggered = true; }
+    }
+
     void FixedUpdate()
     {
         if(AmmoList.instance.suckedObjects.Count > 0)
@@ -46,7 +53,7 @@ public class ArmCannonShot : MonoBehaviour
 
         if (canShoot)
         {
-            if (trigger.action.triggered)
+            if (shotTriggered)
             {
                 if (!ammoEmpty)
                 {
@@ -64,11 +71,8 @@ public class ArmCannonShot : MonoBehaviour
 
                     Debug.Log("bruh");
                 }
+                shotTriggered = false;
             }
-        }
-        else
-        {
-
         }
     }
 }

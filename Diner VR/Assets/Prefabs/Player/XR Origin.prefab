@@ -313,6 +313,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 89711466217917113}
+  - {fileID: 6235813959596785780}
   m_Father: {fileID: 89711466513229860}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -874,6 +875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  suckZone: {fileID: 0}
   canSuck: 1
 --- !u!1 &89711464795866583
 GameObject:
@@ -1746,8 +1748,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89711466217917110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.516}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1.1}
+  m_LocalPosition: {x: 0.0057, y: 0.0037, z: 1.1904}
+  m_LocalScale: {x: 0.28203747, y: 0.18347256, z: 2.4119265}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 89711466285248280}
@@ -1876,8 +1878,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.89194417, y: 0.90466225, z: 0.08946158}
+  m_Center: {x: 0.024258351, y: -0.02786666, z: -0.1868812}
 --- !u!114 &89711466285248282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1957,3 +1959,37 @@ Transform:
   m_Father: {fileID: 89711464795866582}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2297622819021349751
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 89711464521112234}
+    m_Modifications:
+    - target: {fileID: 4765675553784691129, guid: a8f74d5187d247741a04010dd7596b7e, type: 3}
+      propertyPath: m_Name
+      value: Vacuum Blaster 3D Model (Merged)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289693293346104067, guid: a8f74d5187d247741a04010dd7596b7e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289693293346104067, guid: a8f74d5187d247741a04010dd7596b7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289693293346104067, guid: a8f74d5187d247741a04010dd7596b7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289693293346104067, guid: a8f74d5187d247741a04010dd7596b7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a8f74d5187d247741a04010dd7596b7e, type: 3}
+--- !u!4 &6235813959596785780 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5289693293346104067, guid: a8f74d5187d247741a04010dd7596b7e, type: 3}
+  m_PrefabInstance: {fileID: 2297622819021349751}
+  m_PrefabAsset: {fileID: 0}

@@ -33,6 +33,7 @@ public class EnemyManager : MonoBehaviour
     void Start()
     {
         enemyCap = startingCap;
+        enemyOrderLimit = startingOrderLimit;
     }
 
     void Update()

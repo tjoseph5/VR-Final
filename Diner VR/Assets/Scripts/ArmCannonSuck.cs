@@ -8,7 +8,7 @@ public class ArmCannonSuck : MonoBehaviour
 {
     public InputActionReference trigger;
 
-    GameObject suckZone;
+    [HideInInspector] public GameObject suckZone;
 
     public bool canSuck;
 
