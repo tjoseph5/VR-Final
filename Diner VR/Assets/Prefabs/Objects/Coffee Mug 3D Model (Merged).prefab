@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5491381411775717315}
   - component: {fileID: 3889195882326698580}
   - component: {fileID: 7151462609921844633}
+  - component: {fileID: -808487195629779199}
   m_Layer: 0
   m_Name: Coffee Mug 3D Model (Merged)
-  m_TagString: Untagged
+  m_TagString: Suckable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +101,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &7151462609921844633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -114,3 +115,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 133.78827, y: 100.09853, z: 109.3501}
   m_Center: {x: -0.14916992, y: -0.0024719238, z: -0.000020980835}
+--- !u!114 &-808487195629779199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6284124828278242838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6f445125238d541b820464fbf5eefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  originSpawn: {fileID: 0}
+  hasBeenShot: 0

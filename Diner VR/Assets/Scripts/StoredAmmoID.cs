@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StoredAmmoID : MonoBehaviour
 {
-    public enum ObjectType { sphere, fork, spoon, knife, ketchup, mustard, fries }
+    public enum ObjectType { c_mug, fork, spoon, knife, ketchup, mustard, fries, plate, syrup }
     public ObjectType type;
 
     public ItemSpawning originSpawn;

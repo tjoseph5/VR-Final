@@ -61,6 +61,8 @@ public class WavesSystem : MonoBehaviour
                 if (EnemyManager.instance.enemyCap < EnemyManager.instance.maxOverallEnemiesCap) { EnemyManager.instance.enemyCap += 3; }
 
                 EnemyManager.instance.enemyOrderLimit += 5;
+
+                PlayerHead.instance.playerHealth = 10;
             }
 
             GameObject.Find("RightHand Controller").GetComponent<XRInteractorLineVisual>().enabled = false;

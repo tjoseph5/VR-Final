@@ -7,6 +7,11 @@ public class MenuActionReferences : MonoBehaviour
     public void StartWave()
     {
         WavesSystem.instance.waveIsActive = true;
+
+        foreach(MenuOrderSystem menus in GameObject.FindObjectsOfType<MenuOrderSystem>())
+        {
+            Destroy(menus.gameObject, 1.5f);
+        }
     }
 
     public void Substract(int enemy)

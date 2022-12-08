@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7597429814602466651}
   - component: {fileID: 972504777199887346}
   m_Layer: 5
-  m_Name: Order Display (1)
+  m_Name: Wave Status
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1016,6 +1016,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5416d38cb5d5de3489d76843909f264d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 3002868315150803462}
+  waffleCounter: {fileID: 1496529447626982517}
+  friesCounter: {fileID: 572064196584207438}
+  milkshakeCounter: {fileID: 4498772231372493884}
+  waveUI: {fileID: 7159042677687272468}
+  menuOrder: {fileID: 5445092003278231902}
+  statusUI: {fileID: 972504777199887346}
 --- !u!1 &6052479402354507605
 GameObject:
   m_ObjectHideFlags: 0

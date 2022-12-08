@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Shooter Item Pool
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 2466230119478370033, guid: 87f635701629f3c4c81c5e47862cfaed, type: 3}
+  - {fileID: 6284124828278242838, guid: 537fb328723b7b24dba792ada642cad7, type: 3}
   - {fileID: 9133915515875551180, guid: 9fae9f07429a61c41872f971bfb559b8, type: 3}
   - {fileID: 8978334364175212468, guid: dde760712bb192645bf9603cc261108e, type: 3}
   - {fileID: 2466026479679694654, guid: 897d55efce4a2ee48a02b34d7d0e13b2, type: 3}
   - {fileID: 7603172675430540753, guid: 21e418d71574b8d41a1ddaa547168996, type: 3}
   - {fileID: 6909049500564513879, guid: 78061bb125c44f84aa831d5d3b755a6e, type: 3}
-  - {fileID: 7269425932974018675, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+  - {fileID: 5541457126584885482, guid: a4f62dcf6f1ee49428c079fb70c27ac5, type: 3}
+  - {fileID: 561167129527557777, guid: 8ad4bd557ce29ff4a9481e6cc64a2d7b, type: 3}
+  - {fileID: 825170784302261786, guid: f12b2d487fa45714789dae7915d93b8f, type: 3}

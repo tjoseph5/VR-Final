@@ -1215,7 +1215,6 @@ GameObject:
   - component: {fileID: 4907178314689557264}
   - component: {fileID: 4907178314689557265}
   - component: {fileID: 7359818816000799635}
-  - component: {fileID: 9178174965722271595}
   m_Layer: 0
   m_Name: menu paper
   m_TagString: Untagged
@@ -1233,7 +1232,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4907178314859966895}
   - {fileID: 4907178315140327758}
@@ -1256,7 +1255,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &7359818816000799635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1279,21 +1278,6 @@ MonoBehaviour:
   waffleCounter: {fileID: 2240887449449597271}
   friesCounter: {fileID: 271680469948816732}
   milkshakeCounter: {fileID: 2379291654253442521}
---- !u!114 &9178174965722271595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4907178314689557266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e6f445125238d541b820464fbf5eefc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  originSpawn: {fileID: 0}
-  hasBeenShot: 0
 --- !u!1 &4907178314859966888
 GameObject:
   m_ObjectHideFlags: 0
