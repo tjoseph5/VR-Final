@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class PlayerCounter : MonoBehaviour
 {
-    void OnTirggerEnter(Collider other)
+    void OnCollisionEnter(Collision col)
     {
-        if (other.gameObject.tag == "Enemy" && other.gameObject.GetComponent<EnemyAI>().enemyType == EnemyAI.EnemyType.charger)
+        if (col.gameObject.tag == "Enemy" && col.gameObject.GetComponent<EnemyAI>())
         {
-            Destroy(other.gameObject);
-            PlayerHead.instance.playerHealth -= 1;
-            PlayerHead.instance.HurtEffect();
+            if (col.gameObject.GetComponent<EnemyAI>().enemyType == EnemyAI.EnemyType.charger)
+            {
+                Destroy(col.gameObject);
+                PlayerHead.instance.playerHealth -= 1;
+                PlayerHead.instance.HurtEffect();
+            }
         }
     }
 }
