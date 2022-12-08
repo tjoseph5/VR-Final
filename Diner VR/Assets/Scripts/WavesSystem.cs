@@ -13,6 +13,7 @@ public class WavesSystem : MonoBehaviour
     public bool waveIsActive;
 
     public GameObject menu;
+    public GameObject gameOver;
 
     private void Awake()
     {
@@ -64,10 +65,10 @@ public class WavesSystem : MonoBehaviour
                 PlayerHead.instance.playerHealth = 10;
             }
 
-            GameObject.Find("RightHand Controller").GetComponent<XRInteractorLineVisual>().enabled = false;
+            //GameObject.Find("RightHand Controller").GetComponent<XRInteractorLineVisual>().enabled = false;
             GameObject.Find("LeftHand Controller").GetComponent<XRInteractorLineVisual>().enabled = false;
 
-            GameObject.Find("RightHand Controller").GetComponent<LineRenderer>().enabled = false;
+            //GameObject.Find("RightHand Controller").GetComponent<LineRenderer>().enabled = false;
             GameObject.Find("LeftHand Controller").GetComponent<LineRenderer>().enabled = false;
 
             foreach(Button button in GameObject.FindObjectsOfType<Button>())
@@ -93,10 +94,10 @@ public class WavesSystem : MonoBehaviour
 
             ArmCannonSuck.instance.suckZone.SetActive(false);
 
-            GameObject.Find("RightHand Controller").GetComponent<XRInteractorLineVisual>().enabled = true;
+            //GameObject.Find("RightHand Controller").GetComponent<XRInteractorLineVisual>().enabled = true;
             GameObject.Find("LeftHand Controller").GetComponent<XRInteractorLineVisual>().enabled = true;
 
-            GameObject.Find("RightHand Controller").GetComponent<LineRenderer>().enabled = true;
+            //GameObject.Find("RightHand Controller").GetComponent<LineRenderer>().enabled = true;
             GameObject.Find("LeftHand Controller").GetComponent<LineRenderer>().enabled = true;
         }
     }

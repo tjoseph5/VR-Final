@@ -10,4 +10,15 @@ public class StoredAmmoID : MonoBehaviour
     public ItemSpawning originSpawn;
 
     public bool hasBeenShot = false;
+
+    private void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.tag == "surface")
+        {
+            if (!gameObject.GetComponent<Rigidbody>().useGravity)
+            {
+                gameObject.GetComponent<Rigidbody>().useGravity = true;
+            }
+        }
+    }
 }

@@ -61,6 +61,7 @@ public class ArmCannonShot : MonoBehaviour
                     ammo.GetComponent<Rigidbody>().velocity = shotStrength * transform.forward;
 
                     ammo.GetComponent<StoredAmmoID>().hasBeenShot = true;
+                    ammo.GetComponent<Rigidbody>().useGravity = false;
 
                     AmmoList.instance.suckedObjects.RemoveAt(0);
                 }
