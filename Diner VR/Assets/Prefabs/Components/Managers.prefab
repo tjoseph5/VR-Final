@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveCounter: 0
   waveIsActive: 1
+  menu: {fileID: 4907178314689557266, guid: 00d59f9de858e8744aa10332ed180967, type: 3}
 --- !u!1 &4079690262612288750
 GameObject:
   m_ObjectHideFlags: 0

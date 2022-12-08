@@ -92,11 +92,6 @@ public class MenuOrderSystem : MonoBehaviour
         }
         else
         {
-            if(gameObject.tag != "Suckable")
-            {
-                gameObject.tag = "Suckable";
-            }
-
             rb.constraints = RigidbodyConstraints.None;
         }
     }

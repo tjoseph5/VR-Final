@@ -12,6 +12,8 @@ public class WavesSystem : MonoBehaviour
     public int waveCounter;
     public bool waveIsActive;
 
+    public GameObject menu;
+
     private void Awake()
     {
         if (instance == null)
@@ -25,12 +27,9 @@ public class WavesSystem : MonoBehaviour
         waveIsActive = false; //make this false at the start
         waveCounter = 1;
 
-        foreach(ItemSpawning item in GameObject.FindObjectsOfType<ItemSpawning>())
+        foreach (MenuSpawner spawner in GameObject.FindObjectsOfType<MenuSpawner>())
         {
-            if (!item.canRefresh)
-            {
-                item.canRefresh = true;
-            }
+            spawner.SpawnMenu();
         }
     }
 
@@ -111,7 +110,13 @@ public class WavesSystem : MonoBehaviour
 
         foreach(ItemSpawning spawner in GameObject.FindObjectsOfType<ItemSpawning>())
         {
+            spawner.canRefresh = false;
             spawner.ActivateNewSpawn();
+        }
+
+        foreach(MenuSpawner spawner in GameObject.FindObjectsOfType<MenuSpawner>())
+        {
+            spawner.SpawnMenu();
         }
     }
 }

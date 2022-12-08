@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3831834868128028994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.175, y: 0.58, z: 1.977}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -103,12 +103,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 0
-  ammo: {fileID: 7269425932974018675, guid: dcfad5689d6776b4fbfa6964edf0d699, type: 3}
+  ammo: {fileID: 8187590781952125280, guid: 2204f7b22a89dd5458780a9b73bbc426, type: 3}
   shotPos: {fileID: 6790703659453718744}
   shotRate: 1
   shotStrength: 40
   moveSpeed: 0.7
   distanceThreshold: 4
+  foodType: 2
+  enemyHealth: 0
 --- !u!54 &7822406431942249839
 Rigidbody:
   m_ObjectHideFlags: 0

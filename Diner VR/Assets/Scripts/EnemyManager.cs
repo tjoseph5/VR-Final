@@ -53,5 +53,20 @@ public class EnemyManager : MonoBehaviour
         {
             enemyCap = maxOverallEnemiesCap;
         }
+
+        if(waffleEnemyAmt < 0)
+        {
+            waffleEnemyAmt = 0;
+        }
+
+        if(friesEnemyAmt < 0)
+        {
+            friesEnemyAmt = 0;
+        }
+
+        if(milkshakeEnemyAmt < 0)
+        {
+            milkshakeEnemyAmt = 0;
+        }
     }
 }

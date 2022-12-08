@@ -70,11 +70,11 @@ public class AmmoList : MonoBehaviour
                 case StoredAmmoID.ObjectType.plate:
                     suckedObjects.Add(prefabSuckables.items[8]);
                     break;
-                    /*
-                case StoredAmmoID.ObjectType.menu:
+                    
+                case StoredAmmoID.ObjectType.cream:
                     suckedObjects.Add(prefabSuckables.items[9]);
                     break;
-                    */
+                    
             }
 
             if(other.gameObject.GetComponent<StoredAmmoID>() && other.gameObject.GetComponent<StoredAmmoID>().originSpawn != null)

@@ -131,6 +131,8 @@ MonoBehaviour:
   shotStrength: 30
   moveSpeed: 0.5
   distanceThreshold: 2
+  foodType: 1
+  enemyHealth: 0
 --- !u!64 &2808812836554479909
 MeshCollider:
   m_ObjectHideFlags: 0
