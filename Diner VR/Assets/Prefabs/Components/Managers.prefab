@@ -47,6 +47,8 @@ MonoBehaviour:
   waveCounter: 0
   waveIsActive: 1
   menu: {fileID: 4907178314689557266, guid: 00d59f9de858e8744aa10332ed180967, type: 3}
+  gameOver: {fileID: 7360702150628338970, guid: 3b3936c810843ff42850cedc5202a40f, type: 3}
+  randomFinalScoreValue: 0
 --- !u!1 &4079690262612288750
 GameObject:
   m_ObjectHideFlags: 0

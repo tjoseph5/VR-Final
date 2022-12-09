@@ -8,4 +8,9 @@ public class MenuSpawner : MonoBehaviour
     {
         Instantiate(WavesSystem.instance.menu, transform.position, transform.rotation, null);
     }
+
+    public void SpawnBill()
+    {
+        Instantiate(WavesSystem.instance.gameOver, transform.position, transform.rotation, null);
+    }
 }

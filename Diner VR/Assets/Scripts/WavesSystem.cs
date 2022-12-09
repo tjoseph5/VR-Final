@@ -13,7 +13,11 @@ public class WavesSystem : MonoBehaviour
     public bool waveIsActive;
 
     public GameObject menu;
+
     public GameObject gameOver;
+    [HideInInspector] public int randomFinalScoreValue;
+
+    bool gameOverBool;
 
     private void Awake()
     {
@@ -32,6 +36,10 @@ public class WavesSystem : MonoBehaviour
         {
             spawner.SpawnMenu();
         }
+
+        randomFinalScoreValue = Random.Range(1, 1000000000);
+
+        gameOverBool = false;
     }
 
     private void Update()
@@ -53,16 +61,24 @@ public class WavesSystem : MonoBehaviour
             }
             else if(EnemyManager.instance.enemyOrder <= 0 && EnemyManager.instance.currentEnemies == 0)
             {
-                waveIsActive = false;
+                if (!gameOverBool)
+                {
+                    waveIsActive = false;
 
-                waveCounter++;
-                ClearItems_UpdateSpawners();
+                    waveCounter++;
+                    ClearItems_UpdateSpawners();
 
-                if (EnemyManager.instance.enemyCap < EnemyManager.instance.maxOverallEnemiesCap) { EnemyManager.instance.enemyCap += 3; }
+                    if (EnemyManager.instance.enemyCap < EnemyManager.instance.maxOverallEnemiesCap) { EnemyManager.instance.enemyCap += 3; }
 
-                EnemyManager.instance.enemyOrderLimit += 5;
+                    EnemyManager.instance.enemyOrderLimit += 5;
 
-                PlayerHead.instance.playerHealth = 10;
+                    PlayerHead.instance.playerHealth = 10;
+                }
+            }
+
+            if(PlayerHead.instance.playerHealth == 0)
+            {
+                EndGame();
             }
 
             //GameObject.Find("RightHand Controller").GetComponent<XRInteractorLineVisual>().enabled = false;
@@ -118,6 +134,32 @@ public class WavesSystem : MonoBehaviour
         foreach(MenuSpawner spawner in GameObject.FindObjectsOfType<MenuSpawner>())
         {
             spawner.SpawnMenu();
+        }
+    }
+
+    public void EndGame()
+    {
+        gameOverBool = true;
+        waveIsActive = false;
+
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag("Suckable"))
+        {
+            Destroy(item);
+        }
+
+        foreach (ItemSpawning spawner in GameObject.FindObjectsOfType<ItemSpawning>())
+        {
+            Destroy(spawner);
+        }
+
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            Destroy(enemy);
+        }
+
+        foreach (MenuSpawner spawner in GameObject.FindObjectsOfType<MenuSpawner>())
+        {
+            spawner.SpawnBill();
         }
     }
 }
