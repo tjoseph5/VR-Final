@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7409538144407069459}
   - component: {fileID: 5871616642090806454}
   - component: {fileID: 8545821584114899068}
+  - component: {fileID: 1171639529}
   m_Layer: 0
   m_Name: Diner Table 3D Model (Slim)
   m_TagString: Untagged
@@ -25,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7897104843882854825}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.41, y: 0.5845, z: 0}
-  m_LocalScale: {x: 0.0043431, y: 0.0043431, z: 0.0043431}
+  m_LocalScale: {x: 0.00794105, y: 0.00794105, z: 0.00794105}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1171639529
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7897104843882854825}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 200.01413, y: 116.585175, z: 161.12398}
+  m_Center: {x: 0.000007629394, y: -0.0045013423, z: 0.00003433227}
