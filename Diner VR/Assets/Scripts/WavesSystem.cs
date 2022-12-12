@@ -91,7 +91,10 @@ public class WavesSystem : MonoBehaviour
             {
                 if (button.interactable)
                 {
-                    button.interactable = false;
+                    if (PlayerHead.instance.playerHealth > 0)
+                    {
+                        button.interactable = false;
+                    }
                 }
             }
         }
@@ -160,6 +163,14 @@ public class WavesSystem : MonoBehaviour
         foreach (MenuSpawner spawner in GameObject.FindObjectsOfType<MenuSpawner>())
         {
             spawner.SpawnBill();
+        }
+
+        foreach (Button button in GameObject.FindObjectsOfType<Button>())
+        {
+            if (!button.interactable)
+            {
+                button.interactable = true;
+            }
         }
     }
 }
