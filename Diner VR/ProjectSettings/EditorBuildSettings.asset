@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Test Scene/Adam/Greybox.unity
+    guid: 5f4270a3645e1e14fad60747967020e7
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 585f94d9e16dda74884d0facc7cb6ec5, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a2fea8efa9992b74d90d3e36bb3b5a57, type: 2}

@@ -18,7 +18,6 @@ public class SuckZone : MonoBehaviour
         {
             instance = this;
         }
-
     }
 
     void Start()
@@ -34,23 +33,29 @@ public class SuckZone : MonoBehaviour
     //This adds any gameObject with a rigidbody component to the WindZoneRbs list on collision
     private void OnTriggerEnter(Collider other)
     {
-        Rigidbody objectRigid = other.gameObject.GetComponent<Rigidbody>();
-
-        if (objectRigid != null)
+        if (other.gameObject.tag == "Suckable")
         {
-            WindZoneRbs.Add(objectRigid);
+            Rigidbody objectRigid = other.gameObject.GetComponent<Rigidbody>();
+
+            if (objectRigid != null)
+            {
+                WindZoneRbs.Add(objectRigid);
+            }
         }
     }
 
     //This removes any gameObject with a rigidbody component to the WindZoneRbs list out of collision
     private void OnTriggerExit(Collider other)
     {
-        Rigidbody objectRigid = other.gameObject.GetComponent<Rigidbody>();
-
-        if (objectRigid != null)
+        if (other.gameObject.tag == "Suckable")
         {
-            objectRigid.useGravity = true;
-            WindZoneRbs.Remove(objectRigid);
+            Rigidbody objectRigid = other.gameObject.GetComponent<Rigidbody>();
+
+            if (objectRigid != null)
+            {
+                objectRigid.useGravity = true;
+                WindZoneRbs.Remove(objectRigid);
+            }
         }
     }
 

@@ -39,7 +39,7 @@ public class AmmoList : MonoBehaviour
                     suckedObjects.Add(prefabSuckables.items[2]);
                     break;
 
-                case StoredAmmoID.ObjectType.sphere:
+                case StoredAmmoID.ObjectType.c_mug:
                     suckedObjects.Add(prefabSuckables.items[0]);
                     break;
 
@@ -62,6 +62,19 @@ public class AmmoList : MonoBehaviour
                 case StoredAmmoID.ObjectType.fries:
                     suckedObjects.Add(prefabSuckables.items[6]);
                     break;
+
+                case StoredAmmoID.ObjectType.syrup:
+                    suckedObjects.Add(prefabSuckables.items[7]);
+                    break;
+
+                case StoredAmmoID.ObjectType.plate:
+                    suckedObjects.Add(prefabSuckables.items[8]);
+                    break;
+                    
+                case StoredAmmoID.ObjectType.cream:
+                    suckedObjects.Add(prefabSuckables.items[9]);
+                    break;
+                    
             }
 
             if(other.gameObject.GetComponent<StoredAmmoID>() && other.gameObject.GetComponent<StoredAmmoID>().originSpawn != null)

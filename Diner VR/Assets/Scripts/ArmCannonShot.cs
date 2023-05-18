@@ -11,18 +11,35 @@ public class ArmCannonShot : MonoBehaviour
     Vector3 shotDirection;
 
     public bool ammoEmpty;
-
+    public bool canShoot;
 
     public InputActionReference trigger;
 
-    public GameObject defaultAmmoObject; 
+    public GameObject defaultAmmoObject;
+
+    public static ArmCannonShot instance;
+
+    bool shotTriggered;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     void Start()
     {
         shotDirection = shotPos.forward;
+        shotTriggered = false;
     }
 
-    // Update is called once per frame
+    private void Update()
+    {
+        if (trigger.action.triggered) { shotTriggered = true; }
+    }
+
     void FixedUpdate()
     {
         if(AmmoList.instance.suckedObjects.Count > 0)
@@ -34,22 +51,28 @@ public class ArmCannonShot : MonoBehaviour
             ammoEmpty = true;
         }
 
-
-        if (trigger.action.triggered)
+        if (canShoot)
         {
-            if(!ammoEmpty)
+            if (shotTriggered)
             {
-                GameObject ammo = Instantiate(AmmoList.instance.suckedObjects[0], shotPos.position, shotPos.rotation, null);
-                ammo.GetComponent<Rigidbody>().velocity = shotStrength * transform.forward;
+                if (!ammoEmpty)
+                {
+                    GameObject ammo = Instantiate(AmmoList.instance.suckedObjects[0], shotPos.position, shotPos.rotation, null);
+                    ammo.GetComponent<Rigidbody>().velocity = shotStrength * transform.forward;
 
-                AmmoList.instance.suckedObjects.RemoveAt(0);
-            }
-            else
-            {
-                GameObject defaultAmmo = Instantiate(defaultAmmoObject, shotPos.position, shotPos.rotation, null);
-                defaultAmmo.GetComponent<Rigidbody>().velocity = shotStrength * transform.forward;
+                    ammo.GetComponent<StoredAmmoID>().hasBeenShot = true;
+                    ammo.GetComponent<Rigidbody>().useGravity = false;
 
-                Debug.Log("bruh");
+                    AmmoList.instance.suckedObjects.RemoveAt(0);
+                }
+                else
+                {
+                    GameObject defaultAmmo = Instantiate(defaultAmmoObject, shotPos.position, shotPos.rotation, null);
+                    defaultAmmo.GetComponent<Rigidbody>().velocity = shotStrength * transform.forward;
+
+                    Debug.Log("bruh");
+                }
+                shotTriggered = false;
             }
         }
     }
